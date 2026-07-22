@@ -1,11 +1,11 @@
 import express from "express";
 
-// The stats router
+// The game router:
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    console.log("stats/");
-    res.json("stats/");
+    console.log("games/");
+    res.json("games/")
 });
 
 export default router;
