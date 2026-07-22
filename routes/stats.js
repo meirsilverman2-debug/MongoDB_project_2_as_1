@@ -3,8 +3,8 @@ import express from "express";
 // The stats router
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    console.log("stats/");
+router.get("/", async (req, res) => {
+    console.log("endpoint: stats/");
     res.json("stats/");
 });
 

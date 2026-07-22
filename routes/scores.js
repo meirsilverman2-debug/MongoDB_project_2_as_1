@@ -5,13 +5,13 @@ import { create } from "../DAL/dal.atlas_dashboard.js";
 const router = express.Router();
 
 // post a new score router:
-router.post("/", (req, res) => {
-    console.log("scores/");
+router.post("/", async (req, res) => {
+    console.log("endpoint: scores/");
     const data = req.body;
-    const result = create(data);
-    console.log(result);
+    const result = await create(data);
+    console.log(req.body);
     
-    res.status(201).json({success: true, data: result});
+    res.status(201).json({success: true, data: req.body});
 });
 
 export default router;

@@ -3,8 +3,8 @@ import express from "express";
 // The game router:
 const router = express.Router();
 
-router.get("/", (req, res) => {
-    console.log("games/");
+router.get("/", async (req, res) => {
+    console.log("endpoint: games/");
     res.json("games/")
 });
 
